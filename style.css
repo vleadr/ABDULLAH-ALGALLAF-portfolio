@@ -1,0 +1,377 @@
+/* Fonts */
+@font-face {
+    font-family: 'ManchetteFine-Heavy';
+    src: url('fonts/ManchetteFine-Heavy.otf') format('opentype');
+    font-weight: 900;
+  }
+  @font-face {
+    font-family: 'ManchetteFine-Bold';
+    src: url('fonts/ManchetteFine-Bold.otf') format('opentype');
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: 'ManchetteFine-Regular';
+    src: url('fonts/ManchetteFine-Regular.otf') format('opentype');
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: 'ManchetteFine-Medium';
+    src: url('fonts/ManchetteFine-Medium.otf') format('opentype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'ManchetteFine-SemiBold';
+    src: url('fonts/ManchetteFine-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Base */
+  body {
+    background: #000;
+    color: #fff;
+    font-family: 'ManchetteFine-Regular', sans-serif;
+    direction: rtl;
+    text-align: left;
+    padding-top: 350px;        /* adjust to your header’s actual height */
+
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  /* Header */
+  header {
+    
+    text-align: left;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+    
+    
+  }
+  
+  header.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000;         /* match your background */
+    z-index: 1000;            /* keep it above other content */
+  }
+
+  .logo img {
+    
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin-left: 0;
+    margin-bottom: -40px;
+    margin-left: 0;     /* ensure flush to left */
+    margin-right: auto; /* push any extra space to the right */
+
+
+  }
+
+  
+  .names {
+    margin-top: -165px;
+
+  }
+  .arabic-name {
+    font-family: 'ManchetteFine-Heavy', sans-serif;
+    font-size: 2.2rem;
+    text-align: right;    /* align the text itself to the right edge */
+    margin-left: auto;    /* push the element to the right in its container */
+    margin-right: 0;
+    width: 100%;
+    word-spacing: 8px; /* adjust value to your liking */
+  }
+  .subtitle {
+    font-family: 'ManchetteFine-Heavy', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.4em;
+    margin-bottom: 10px;
+    text-align: right;   /* align text to the right */
+  margin-left: auto;   /* push the element itself to the right */
+  margin-right: 0;
+  width: 100%;  
+  }
+  
+  /* Main nav buttons */
+  .main-nav {
+    display: flex;
+    gap: 12px;
+    justify-content: center;      /* center the buttons */
+    margin-top: 20px;
+    gap: 20px;
+    
+}
+/* Align the paragraph under “من أنا” to the right */
+#about p {
+    text-align: right;
+    font-size: 1.4rem;  /* adjust this value as needed */
+    font-family: 'ManchetteFine-SemiBold', sans-serif;
+
+  }
+  
+  
+.main-nav button {
+    background: none;
+    border: none;
+    padding: 8px 16px;            /* make buttons bigger */
+    font-family: 'ManchetteFine-Medium', sans-serif;  /* use medium font */
+    font-size: 2rem;            /* increase font size */
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+    word-spacing: 8px; /* adjust value to your liking */
+}
+section h1 {
+    margin-bottom: 20px;
+    word-spacing: 8px; /* adjust value to your liking */
+  }
+  /* Add top gap to the “من أنا” section */
+#about {
+    margin-top: 40px;  /* adjust value as needed */
+  }
+  
+.main-nav button:hover {
+    background: rgba(255,255,255,0.2);
+}
+  /* Section titles */
+  h1 {
+    font-family: 'ManchetteFine-Heavy', sans-serif;
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+    text-align: right;   /* text alignment */
+    margin-left: auto;   /* push title element to the right */
+    margin-right: 0;
+    width: 100%;  
+  }
+  
+  /* Gallery */
+  .portfolio .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    justify-content: start;
+    margin-bottom: 20px;
+  }
+
+  #portfolio .section-nav {
+    display: none;
+    justify-content: flex-start;
+    gap: 8px;
+    margin: 10px 0;
+  }
+
+  .gallery-item {
+    background: #111;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+  }
+  .caption {
+    padding: 8px;
+    text-align: left;
+  }
+  .caption h2 {
+    font-family: 'ManchetteFine-Heavy', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+  }
+  .caption p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  /* Section-nav (Prev/Next) */
+  .section-nav {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+    margin: 10px 0;
+  }
+  .section-nav button {
+    background: none;
+    border: none;
+    padding: 5px 14px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .section-nav button:hover {
+    background: rgba(255,255,255,0.2);
+  }
+  
+  /* About */
+  .about p {
+    line-height: 1.5;
+    text-align: left;
+  }
+  
+  /* Contact */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* make all children align to start (left) */
+    gap: 10px;
+    max-width: 400px;
+    width: 100%;              /* ensure the form container can stretch */
+    margin-bottom: 15px;
+  }
+  .contact-form label {
+    font-family: 'ManchetteFine-Heavy', sans-serif;
+    display: block;      /* ensure it fills the form width */
+    width: 100%;
+    text-align: right;   /* align the label text to the right */
+    margin-bottom: 5px;  /* optional spacing below label */
+  }
+
+  .contact-form input,
+.contact-form textarea {
+  width: 100%;              /* full width of the form container */
+  text-align: right;         /* left-align the user’s text inside each field */
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  font-family: 'ManchetteFine-Regular', sans-serif;
+}
+  .contact-form button {
+    padding: 10px;
+    background: #fff;
+    border: none;
+    border-radius: 4px;
+    color: #000;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    font-family: 'ManchetteFine-Bold', sans-serif;
+  }
+  .contact-form button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Social links */
+  /* Center social buttons */
+.social {
+    display: flex;
+    gap: 10px;
+    justify-content: center;  /* center the social links */
+    margin-bottom: 15px;
+}
+
+  .social a {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.3s, color 0.3s;
+  }
+  .social a:hover {
+    background: #fff;
+    color: #000;
+  }
+  
+  .footer {
+    text-align: center;
+  }
+  /* Work Detail Page Styles */
+.back-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-family: 'ManchetteFine-Regular', sans-serif;
+}
+.work-title {
+  font-family: 'ManchetteFine-Heavy', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: right;
+}
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+.work-description h2 {
+  font-family: 'ManchetteFine-Heavy', sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  text-align: right;
+}
+.work-description p {
+  font-family: 'ManchetteFine-Regular', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: right;
+}
+.other-works {
+  margin-top: 30px;
+}
+.other-works .section-title {
+  font-family: 'ManchetteFine-Heavy', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: right;
+}
+.other-works .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  justify-content: start;
+}
+.other-works .gallery-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.other-works .gallery-item img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+.other-works .caption h2 {
+  font-family: 'ManchetteFine-Heavy', sans-serif;
+  font-size: 1rem;
+  margin: 0 0 4px;
+  text-align: left;
+}
+.other-works .caption p {
+  font-family: 'ManchetteFine-Regular', sans-serif;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin: 0;
+  text-align: left;
+}

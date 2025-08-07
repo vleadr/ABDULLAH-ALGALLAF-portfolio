@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اختبار التحصيلي - عرض العمل</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <div id="site-header"></div>
+
+  <div class="container">
+    <button class="back-btn" onclick="history.back()">⯇ العودة</button>
+
+    <h1 class="work-title">اختبار التحصيلي</h1>
+
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/usyHDuVc6cA?start=587" allowfullscreen></iframe>
+    </div>
+
+    <div class="work-description">
+      <h2>الوصف</h2>
+      <p>فيديو تجريبي فقط</p>
+    </div>
+
+    <!-- Other Works -->
+    <section class="other-works">
+      <h2 class="section-title">أعمال أخرى</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <a href="work2.html">
+            <img src="campaign2.jpg" alt="الحملة 2" onerror="this.onerror=null; this.src='default.jpg';">
+            <div class="caption">
+              <h2>اسم العمل 2</h2>
+              <p>اسم العميل 2</p>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="work3.html">
+            <img src="campaign3.jpg" alt="الحملة 3" onerror="this.onerror=null; this.src='default.jpg';">
+            <div class="caption">
+              <h2>اسم العمل 3</h2>
+              <p>اسم العميل 3</p>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="work4.html">
+            <img src="campaign4.jpg" alt="الحملة 4" onerror="this.onerror=null; this.src='default.jpg';">
+            <div class="caption">
+              <h2>اسم العمل 4</h2>
+              <p>اسم العميل 4</p>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="work5.html">
+            <img src="campaign5.jpg" alt="الحملة 5" onerror="this.onerror=null; this.src='default.jpg';">
+            <div class="caption">
+              <h2>اسم العمل 5</h2>
+              <p>اسم العميل 5</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <div id="site-footer"></div>
+
+  <script src="main.js"></script>
+  <script>
+    // inject header
+    fetch('header.html').then(r => r.text()).then(html => {
+      document.getElementById('site-header').innerHTML = html;
+      document.querySelectorAll('button[data-section]').forEach(btn => {
+        btn.onclick = () => document.getElementById(btn.dataset.section).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // inject footer
+    fetch('footer.html').then(r => r.text()).then(html => {
+      document.getElementById('site-footer').innerHTML = html;
+      const cbtn = document.querySelector('.contact-button');
+      if (cbtn) cbtn.onclick = () => {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+      };
+    });
+  </script>
+</body>
+</html>
